@@ -1,0 +1,130 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #ffffff;
+  }
+.center-div
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 360px;
+  height: 440px;
+  background-color: rgb(255,255,255);
+  border-radius: 3px;
+  padding: 15px;
+}
+.box .social {
+    float: none;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+.social .circle{
+    background-color: #EEEEEE;
+    color: #FFFFFF;
+    border-radius: 100px;
+    display: inline-block;
+    margin: 0 17px;
+    padding: 15px;
+}
+ .social .circle .fa{
+    font-size: 16px;
+}
+.social .facebook{
+    background-color: #455CA8;
+    color: #FFFFFF;
+}
+.social .google{
+    background-color: #F74933;
+}
+.social .github{
+    background-color: #403A3A;
+}
+.facebook:hover{
+    background-color: #6E83CD;
+}
+.google:hover{
+    background-color: #FF7566;
+}
+.github:hover{
+    background-color: #4D4D4d;;
+}
+
+//@extend
+
+.division {
+    float: none;
+    margin: 0 auto 18px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.division .line {
+    border-top: 1px solid #DFDFDF;
+    position: absolute;
+    top: 10px;
+    width: 34%;
+}
+.division .line.l {
+    left: 0;
+}
+.division .line.r {
+    right: 0;
+}
+.division span {
+    color: #424242;
+    font-size: 17px;
+}
+// 
+
+.btn-login{
+    background-color: #00BBFF;
+    border-color: #00BBFF;
+    border-width: 0;
+    color: #FFFFFF;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.btn-login:hover, .registerBox .btn-register:hover{
+    background-color: #00A4E4;
+    color: #FFFFFF;
+}
+.form-control{
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.09);
+    box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
+    color: #FFFFFF;
+    border: 0px solid #cad1d7;
+}
+.form-control:hover{
+    // background-color: rgba(0,0,0,.16);
+}
+.form-control:focus{
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
+    // background-color: rgba(0,0,0,0.23);
+    color: #FFFFFF;
+ }
+// .box .form input[type="text"], .login .box .form input[type="password"] {
+//     border-radius: 0px;
+//     border: none;
+//     color: #333333;
+//     font-size: 16px;
+//     height: 50px;
+//     margin-bottom: 5px;
+//     padding: 13px 12px;
+//     width: 100%;
+// }
+input{
+    height: 50px;
+}
+
+

@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+// import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InteractionService {
-   private teacherMessageSource = new Subject<string>();
+   private  messageSource = new BehaviorSubject<string>("");
+   currentMessage =this.messageSource.asObservable();
   constructor() { }
+  changeMessage(message:string){
+    this.messageSource.next(message);
+  }
 }

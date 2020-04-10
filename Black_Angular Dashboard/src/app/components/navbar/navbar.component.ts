@@ -3,7 +3,7 @@ import { ROUTES } from "../sidebar/sidebar.component";
 import { Location } from "@angular/common";
 import { Router } from "@angular/router";
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-
+import {InteractionService} from '../../interaction.service';
 @Component({
   selector: "app-navbar",
   templateUrl: "./navbar.component.html",
@@ -19,19 +19,17 @@ export class NavbarComponent implements OnInit, OnDestroy {
   public isCollapsed = true;
 
   closeResult: string;
-   @Input()
-   uname:any;
+   message:string;
   constructor(
     location: Location,
     private element: ElementRef,
     private router: Router,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private service:InteractionService
   ) {
     this.location = location;
     this.sidebarVisible = false;
   }
-  //child to parent
-  childData:string;
   
 
   // function that adds color white/transparent to the navbar on resize (this is for the collapse)
@@ -46,7 +44,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
      }
    };
   ngOnInit() {
-    console.log('parent data is',this.uname);
+    this.service.currentMessage.subscribe(message => this.message = message);
+
     window.addEventListener("resize", this.updateColor);
     this.listTitles = ROUTES.filter(listTitle => listTitle);
     const navbar: HTMLElement = this.element.nativeElement;
@@ -198,5 +197,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(){
      window.removeEventListener("resize", this.updateColor);
+  }
+  logout(){
+    this.router.navigate(["''"])
   }
 }

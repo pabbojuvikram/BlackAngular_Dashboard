@@ -1,0 +1,14 @@
+@media screen and (min-width: 992px){
+.navbar .caret {
+    position: absolute;
+    left: 99%;
+    top: 55%;
+    margin-left: 0;
+}
+}
+.photo{
+margin-left: -29px;
+}
+.navbar-nav li {
+    padding: 0px 33px;
+}
